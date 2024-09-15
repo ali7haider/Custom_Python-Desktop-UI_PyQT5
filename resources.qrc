@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>images/icons/icon_close.png</file>
+    <file>images/icons/bg.png</file>
+    <file>images/icons/icon_maximize.png</file>
+    <file>images/icons/icon_minimize.png</file>
+    <file>images/icons/icon_restore.png</file>
+    <file>images/icons/close.png</file>
+    <file>images/icons/drop-down.png</file>
+    <file>images/icons/mazimize.png</file>
+    <file>images/icons/minimize.png</file>
+  </qresource>
+</RCC>
