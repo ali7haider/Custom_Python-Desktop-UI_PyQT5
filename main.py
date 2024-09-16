@@ -3,15 +3,17 @@ from PyQt5.QtWidgets import QPushButton, QLabel, QHBoxLayout, QSpacerItem, QSize
 from PyQt5 import uic, QtCore, QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QMouseEvent
-
+from main_ui import Ui_MainWindow  # Import the generated class
 import sys
-import resources_rc
 
-class MainWindow(QMainWindow):
+class MainWindow(QMainWindow,Ui_MainWindow):
     def __init__(self):
         super().__init__()
         # Load the .ui file
-        uic.loadUi('main_ui.ui', self)  # Adjust the path to your .ui file
+        super(MainWindow, self).__init__()
+
+        # Set up the user interface from the generated class
+        self.setupUi(self)
         self.setWindowFlags(Qt.FramelessWindowHint)
 
         # Connect the maximizeRestoreAppBtn button to the maximize_window method
