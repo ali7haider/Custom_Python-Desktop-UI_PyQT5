@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1378</width>
+    <width>1444</width>
     <height>909</height>
    </rect>
   </property>
@@ -56,6 +56,49 @@ background-color:white;
 	background-color: #25993F;
 }
 
+
+
+
+
+/*Combo Box */
+QComboBox {
+    border: none; /* Remove border */
+    background-color: transparent; /* Make background transparent */
+    font: 8pt &quot;Rubik&quot;; /* Set font to Rubik */
+    padding: 2px 5px; /* Add padding (adjust as needed) */
+    color: #4F5268; /* Text color */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF; /* Set the dropdown background color to white */
+    border: 1px solid #D3D3D3; /* Light border for dropdown list */
+    font: 9pt &quot;Rubik&quot;; /* Font for dropdown items */
+    padding: 5px; /* Padding inside dropdown items */
+}
+
+QComboBox::drop-down {
+    border: none; /* Remove border from the drop-down button */
+    background: transparent; /* Make the drop-down button background transparent */
+}
+
+QComboBox::down-arrow {
+  
+	image: url(:/icons/images/icons/drop.png);
+    width: 22px; /* Adjust width of arrow */
+    height: 22px; /* Adjust height of arrow */
+}
+
+QComboBox::item {
+    padding: 5px 10px; /* Padding inside each item in the list */
+    font: 9pt &quot;Rubik&quot;; /* Set font for items */
+}
+
+QToolTip {
+            background-color: #333; /* Dark background color */
+            color: #fff;            /* White text color */
+            border: 1px solid #666; /* Dark border color */
+            padding: 5px;           /* Padding around the text */
+        }
 </string>
   </property>
   <widget class="QWidget" name="bg">
@@ -338,7 +381,7 @@ QPushButton {
 }
 
 #btnHostController:hover {
-    background-color: #218838;
+background-color: #218838;
 color:#fff;
 }
 
@@ -458,6 +501,9 @@ color:#fff;
              </item>
              <item>
               <widget class="QPushButton" name="btnSmt8Ready">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>SMT8 READY</string>
                </property>
@@ -540,6 +586,9 @@ color:#fff;
                 </item>
                 <item>
                  <widget class="QPushButton" name="btnHostController">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="text">
                    <string>ABLED</string>
                   </property>
@@ -587,6 +636,9 @@ color:#fff;
                 </item>
                 <item>
                  <widget class="QPushButton" name="btnAcsEdge">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="text">
                    <string>DISCONNECTED</string>
                   </property>
@@ -640,6 +692,9 @@ color:#fff;
                 </item>
                 <item>
                  <widget class="QPushButton" name="btnTestFloorServer">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="text">
                    <string>DISABLED</string>
                   </property>
@@ -717,6 +772,9 @@ font: 8.5pt &quot;Rubik&quot;;
             <layout class="QGridLayout" name="gridLayout">
              <item row="0" column="0">
               <widget class="QLabel" name="lblAdvancedControl">
+               <property name="toolTip">
+                <string>The container is currently running and operational.</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -727,6 +785,9 @@ font: 8.5pt &quot;Rubik&quot;;
              </item>
              <item row="2" column="1">
               <widget class="QLabel" name="label_11">
+               <property name="toolTip">
+                <string>The container is currently running and operational.</string>
+               </property>
                <property name="text">
                 <string>Basic Control</string>
                </property>
@@ -734,6 +795,9 @@ font: 8.5pt &quot;Rubik&quot;;
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="lblDataCollection">
+               <property name="toolTip">
+                <string>The container has stopped functioning and is not operational.</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -741,6 +805,9 @@ font: 8.5pt &quot;Rubik&quot;;
              </item>
              <item row="1" column="1">
               <widget class="QLabel" name="label_9">
+               <property name="toolTip">
+                <string>The container has stopped functioning and is not operational.</string>
+               </property>
                <property name="text">
                 <string>Data Collection</string>
                </property>
@@ -748,6 +815,9 @@ font: 8.5pt &quot;Rubik&quot;;
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="label_7">
+               <property name="toolTip">
+                <string>The container is currently running and operational.</string>
+               </property>
                <property name="text">
                 <string>Advanced Control</string>
                </property>
@@ -755,6 +825,9 @@ font: 8.5pt &quot;Rubik&quot;;
              </item>
              <item row="2" column="0">
               <widget class="QLabel" name="lblBasicControl">
+               <property name="toolTip">
+                <string>The container is currently running and operational.</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -1919,7 +1992,7 @@ color:#667085;</string>
         <widget class="QFrame" name="frame">
          <property name="maximumSize">
           <size>
-           <width>350</width>
+           <width>300</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1992,6 +2065,9 @@ color:#667085;</string>
                 </property>
                 <item>
                  <widget class="QFrame" name="frame_16">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1999,6 +2075,9 @@ color:#667085;</string>
                    <enum>QFrame::Raised</enum>
                   </property>
                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <property name="spacing">
+                    <number>15</number>
+                   </property>
                    <property name="leftMargin">
                     <number>5</number>
                    </property>
@@ -2139,8 +2218,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>312</width>
-                     <height>610</height>
+                     <width>262</width>
+                     <height>604</height>
                     </rect>
                    </property>
                    <property name="styleSheet">
@@ -2179,7 +2258,7 @@ border-bottom: 1px solid #E4E7EC;
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_9">
                        <property name="spacing">
-                        <number>20</number>
+                        <number>15</number>
                        </property>
                        <property name="leftMargin">
                         <number>5</number>
@@ -2270,6 +2349,9 @@ color:#667085;</string>
                       <property name="orientation">
                        <enum>Qt::Vertical</enum>
                       </property>
+                      <property name="sizeType">
+                       <enum>QSizePolicy::MinimumExpanding</enum>
+                      </property>
                       <property name="sizeHint" stdset="0">
                        <size>
                         <width>20</width>
@@ -2299,8 +2381,6 @@ color:#667085;</string>
  </widget>
  <resources>
   <include location="resources.qrc"/>
-  <include location="C:/Users/Digital Zone/.designer/backup/resources.qrc"/>
-  <include location="../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

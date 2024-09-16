@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>images/icons/drop.png</file>
     <file>images/icons/warning.png</file>
     <file>images/icons/bg2.png</file>
     <file>images/icons/icon_close.png</file>

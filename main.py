@@ -26,6 +26,7 @@ class MainWindow(QMainWindow):
 
         # Initialize UI elements and layout
         self.generate_calibration_file_ui()
+        self.generate_status_file_ui()
 
     def generate_calibration_file_ui(self):
         # Sample data
@@ -39,8 +40,7 @@ class MainWindow(QMainWindow):
             ['Warning-7', '2024-09-07 - 20:15:25', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
             ['Warning-8', '2024-09-08 - 22:25:35', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
             ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-                        ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-
+            ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
             ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json']
 
         ]
@@ -118,8 +118,107 @@ class MainWindow(QMainWindow):
         # Set the widget to the scroll area
         self.scrollArea.setWidget(scroll_content_widget)
 
-    def btn_warning_click(self, warning_name):
-        print(f"Warning button clicked for: {warning_name}")
+    def generate_status_file_ui(self):
+        # Define color mapping for statuses
+        status_colors = {
+            'running': '#25993F',  # Green
+            'paused': '#EF8652',   # Orange
+            'dead': '#B80251'      # Red
+        }
+
+        # Define tooltip messages for statuses
+        status_tooltips = {
+            'running': 'The container is currently running and operational.',
+            'paused': 'The container is paused and not processing tasks.',
+            'dead': 'The container has stopped functioning and is not operational.'
+        }
+
+        # Sample data with container and status
+        status_data = [
+            ['KafkaBroker', 'running'],
+            ['app2', 'paused'],
+            ['app3', 'dead'],
+            ['app4', 'paused'],
+            ['app5', 'running'],
+        ]
+
+        scroll_content_widget = QWidget()
+        scroll_content_layout = QVBoxLayout(scroll_content_widget)
+
+        for profile in status_data:
+            container = profile[0]  # "Container-1", "Container-2", etc.
+            status = profile[1]     # "Running", "Paused", "Dead"
+
+            # Get color and tooltip from status_colors based on status
+            status_color = status_colors.get(status, '#AAA')  # Default to gray if status not found
+            status_tooltip = status_tooltips.get(status, 'Unknown status')  # Default tooltip if status not found
+
+            # Container Label
+            container_label = QLabel()
+            container_label.setText(container)
+            container_label.setStyleSheet("""
+                background-color: transparent;
+                color: #5E5F68;
+                padding: 4px;
+                border: none;
+            """)
+
+            # Frame to hold the status color label and status text label
+            frame = QWidget()
+            frame.setStyleSheet("background-color: white; border: none;")  # Set background color to white
+            frame.setMaximumSize(QtCore.QSize(16777215, 60))  # Adjust height
+            frame_layout = QHBoxLayout(frame)
+            frame_layout.setContentsMargins(6, 6, 6, 6)
+            frame_layout.setSpacing(4)
+
+            # Status Indicator Label (Circle container)
+            status_circle = QLabel()
+            status_circle.setMaximumSize(QtCore.QSize(15, 15))
+            status_circle.setStyleSheet(f"""
+                max-width: 15px;
+                max-height: 15px;
+                border-radius: 7px;
+                margin-right: 5px;
+                background-color: {status_color};  /* Color changes based on status */
+            """)
+            status_circle.setToolTip(status_tooltip)  # Set tooltip for status text label
+
+
+            # Status Text Label
+            status_text_label = QLabel()
+            status_text_label.setText(status)
+            status_text_label.setStyleSheet(f"""
+                background-color: transparent;
+                color: {status_color};  /* Color changes based on status */
+                padding: 2px;
+                border: none;
+            """)
+            status_text_label.setToolTip(status_tooltip)  # Set tooltip for status text label
+
+            # Add components to frame layout
+            frame_layout.addWidget(status_circle)  # Status color circle
+            frame_layout.addWidget(status_text_label)  # Status text
+
+            # Add container label and frame to the main layout
+            container_layout = QHBoxLayout()
+            container_layout.addWidget(container_label)  # Container label
+            container_layout.addWidget(frame)  # Frame with status color and text
+
+            container_widget = QWidget()
+            container_widget.setLayout(container_layout)
+            
+            # Apply a bottom border to the container_widget
+            container_widget.setStyleSheet("border-bottom: 1px solid #C8C9D6; max-height:90px")  # Customize border color
+
+            scroll_content_layout.addWidget(container_widget)
+            scroll_content_layout.setAlignment(QtCore.Qt.AlignTop)  # Align frame content to the top
+
+        # Set the widget to the scroll area
+        self.scrollArea_2.setWidget(scroll_content_widget)
+
+   
+
+    
     def mousePressEvent(self, event: QMouseEvent) -> None:
         if event.button() == Qt.LeftButton:
             self.dragPos = event.globalPos() - self.pos()
