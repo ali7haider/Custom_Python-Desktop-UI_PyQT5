@@ -38,7 +38,11 @@ class MainWindow(QMainWindow):
             ['Warning-6', '2024-09-06 - 18:05:10', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
             ['Warning-7', '2024-09-07 - 20:15:25', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
             ['Warning-8', '2024-09-08 - 22:25:35', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+                        ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+
             ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json']
+
         ]
 
 

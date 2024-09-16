@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1382</width>
+    <width>1378</width>
     <height>909</height>
    </rect>
   </property>
@@ -48,6 +48,14 @@ border:2px solid #BFC1D3;
 border-radius:8px;
 background-color:white;
 }
+#lblStatusRec {
+    max-width: 15px;
+    max-height: 15px;
+    border-radius: 7px; 
+    margin-right: 10px; 
+	background-color: #25993F;
+}
+
 </string>
   </property>
   <widget class="QWidget" name="bg">
@@ -847,6 +855,7 @@ QPushButton {
     color: #667085;
 }
 
+/* Vertical ScrollBar */
 QScrollBar:vertical {
     border: 1px solid #D3D3D3; /* Light border color */
     background: #F9F9F9; /* Light background color */
@@ -885,13 +894,44 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     background: none;
 }
 
+/* Horizontal ScrollBar */
+QScrollBar:horizontal {
+    border: 1px solid #D3D3D3; /* Light border color */
+    background: #F9F9F9; /* Light background color */
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
 
+QScrollBar::handle:horizontal {
+    background: #B0B0B0; /* Dark grey color */
+    min-width: 20px;
+    border-radius: 5px; /* Rounded handle */
+}
 
+QScrollBar::add-line:horizontal {
+    background: #D3D3D3; /* Light border color */
+    width: 12px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
 
+QScrollBar::sub-line:horizontal {
+    background: #D3D3D3; /* Light border color */
+    width: 12px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
 
+QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid #B0B0B0; /* Dark grey color */
+    width: 3px;
+    height: 3px;
+    background: #FFFFFF; /* White arrow background */
+}
 
-
-
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
 </string>
                      </property>
                      <property name="frameShape">
@@ -909,7 +949,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                         <x>0</x>
                         <y>0</y>
                         <width>871</width>
-                        <height>628</height>
+                        <height>712</height>
                        </rect>
                       </property>
                       <property name="styleSheet">
@@ -1019,6 +1059,834 @@ color:#667085;</string>
                         </widget>
                        </item>
                        <item>
+                        <widget class="QFrame" name="frame_28">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_28
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_20">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_12">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_12">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_12">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_27">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_27
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_19">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_11">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_11">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_11">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_18">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_18
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_10">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_2">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_2">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_26">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_26
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_18">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_10">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_10">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_10">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_19">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_19
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_11">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_3">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_3">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_3">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_20">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_20
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_12">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_4">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_4">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_4">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_21">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_21
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_13">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_5">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_5">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_5">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_22">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_22
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_14">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_6">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_6">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_6">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_23">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">#frame_23
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_15">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>30</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btnWarning_7">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>38</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color:#A0104E;</string>
+                            </property>
+                            <property name="text">
+                             <string>   WARNING</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/images/icons/warning.png</normaloff>:/icons/images/icons/warning.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="flat">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblDateTime_7">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>2024-09-01 - 08:15:20</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="lblLink_7">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                            </property>
+                            <property name="text">
+                             <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="margin">
+                             <number>0</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
                         <spacer name="verticalSpacer_4">
                          <property name="orientation">
                           <enum>Qt::Vertical</enum>
@@ -1049,6 +1917,12 @@ color:#667085;</string>
        </item>
        <item>
         <widget class="QFrame" name="frame">
+         <property name="maximumSize">
+          <size>
+           <width>350</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -1063,7 +1937,7 @@ color:#667085;</string>
            <number>60</number>
           </property>
           <property name="rightMargin">
-           <number>30</number>
+           <number>20</number>
           </property>
           <property name="bottomMargin">
            <number>60</number>
@@ -1072,7 +1946,7 @@ color:#667085;</string>
            <widget class="QFrame" name="rightMainFrame">
             <property name="minimumSize">
              <size>
-              <width>250</width>
+              <width>0</width>
               <height>0</height>
              </size>
             </property>
@@ -1086,11 +1960,329 @@ color:#667085;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_7">
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
              <item>
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>TextLabel</string>
+              <widget class="QFrame" name="OuterFrameRight">
+               <property name="styleSheet">
+                <string notr="true">background-color:white;</string>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_20">
+                <property name="spacing">
+                 <number>8</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>6</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QFrame" name="frame_16">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <property name="leftMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>11</number>
+                   </property>
+                   <item>
+                    <widget class="QComboBox" name="comboBox">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>CONTAINER</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_2">
+                     <item>
+                      <property name="text">
+                       <string>STATUS</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QScrollArea" name="scrollArea_2">
+                  <property name="styleSheet">
+                   <string notr="true">QScrollArea {
+    border: none;
+    background-color: #FFFFFF; /* Set background to white */
+}
+
+QLabel {
+    font: BOLD 8pt &quot;Arial&quot;;
+}
+
+QPushButton {
+    font: BOLD 10pt &quot;Arial&quot;;
+    color: #667085;
+}
+
+/* Vertical ScrollBar */
+QScrollBar:vertical {
+    border: 1px solid #D3D3D3; /* Light border color */
+    background: #F9F9F9; /* Light background color */
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #B0B0B0; /* Dark grey color */
+    min-height: 20px;
+    border-radius: 5px; /* Rounded handle */
+}
+
+QScrollBar::add-line:vertical {
+    background: #D3D3D3; /* Light border color */
+    height: 12px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    background: #D3D3D3; /* Light border color */
+    height: 12px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 2px solid #B0B0B0; /* Dark grey color */
+    width: 3px;
+    height: 3px;
+    background: #FFFFFF; /* White arrow background */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Horizontal ScrollBar */
+QScrollBar:horizontal {
+    border: 1px solid #D3D3D3; /* Light border color */
+    background: #F9F9F9; /* Light background color */
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #B0B0B0; /* Dark grey color */
+    min-width: 20px;
+    border-radius: 5px; /* Rounded handle */
+}
+
+QScrollBar::add-line:horizontal {
+    background: #D3D3D3; /* Light border color */
+    width: 12px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: #D3D3D3; /* Light border color */
+    width: 12px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid #B0B0B0; /* Dark grey color */
+    width: 3px;
+    height: 3px;
+    background: #FFFFFF; /* White arrow background */
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="lineWidth">
+                   <number>1</number>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>312</width>
+                     <height>610</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">    background-color: #FFFFFF; /* Set background to white */
+</string>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_80">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>11</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="frame_12">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">#frame_12
+{
+border-bottom: 1px solid #E4E7EC;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_9">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>11</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="lblContainer">
+                         <property name="styleSheet">
+                          <string notr="true">background-color:transparent;
+font: BOLD 10pt &quot;Bell MT&quot;;
+color:#667085;</string>
+                         </property>
+                         <property name="text">
+                          <string>KafkaBroker</string>
+                         </property>
+                         <property name="margin">
+                          <number>0</number>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_17">
+                         <property name="styleSheet">
+                          <string notr="true"/>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_5">
+                          <property name="spacing">
+                           <number>2</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QLabel" name="lblStatusRec">
+                            <property name="minimumSize">
+                             <size>
+                              <width>25</width>
+                              <height>15</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">    max-width: 15px;
+    max-height: 15px;
+    border-radius: 7px; 
+    margin-right: 10px; 
+	background-color: #25993F;</string>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_8">
+                            <property name="styleSheet">
+                             <string notr="true">color:#25993F;</string>
+                            </property>
+                            <property name="text">
+                             <string>running</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -1107,6 +2299,8 @@ color:#667085;</string>
  </widget>
  <resources>
   <include location="resources.qrc"/>
+  <include location="C:/Users/Digital Zone/.designer/backup/resources.qrc"/>
+  <include location="../resources.qrc"/>
  </resources>
  <connections/>
 </ui>
