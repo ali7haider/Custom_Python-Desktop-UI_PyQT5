@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
 from PyQt5.QtWidgets import QPushButton, QLabel, QHBoxLayout, QSpacerItem, QSizePolicy
-from PyQt5 import uic, QtCore, QtGui
+from PyQt5 import QtCore, QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QMouseEvent
 from main_ui import Ui_MainWindow  # Import the generated class
