@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1367, 900)
-        MainWindow.setMinimumSize(QtCore.QSize(1135, 870))
+        MainWindow.resize(1322, 885)
+        MainWindow.setMinimumSize(QtCore.QSize(1135, 885))
         font = QtGui.QFont()
         font.setFamily("Rubik")
         font.setPointSize(9)
@@ -190,6 +190,7 @@ class Ui_MainWindow(object):
         self.mainBar.setFrameShadow(QtWidgets.QFrame.Raised)
         self.mainBar.setObjectName("mainBar")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.mainBar)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.leftBar = QtWidgets.QFrame(self.mainBar)
         self.leftBar.setMinimumSize(QtCore.QSize(130, 0))
@@ -216,7 +217,7 @@ class Ui_MainWindow(object):
 "    background-color: transparent;\n"
 "    color: #28a745;  /* Green text */\n"
 "}\n"
-"\n"
+"/*\n"
 "#btnSmt8Ready:hover {\n"
 "    background-color: #28a745;\n"
 "    color: #fff;\n"
@@ -228,7 +229,7 @@ class Ui_MainWindow(object):
 "    background-color: transparent;\n"
 "    color: #28a745;  /* White text */\n"
 "}\n"
-"\n"
+"/*\n"
 "#btnHostController:hover {\n"
 "background-color: #218838;\n"
 "color:#fff;\n"
@@ -240,7 +241,7 @@ class Ui_MainWindow(object):
 "    background-color: transparent;\n"
 "    color: #fd7e14;  /* Orange text */\n"
 "}\n"
-"\n"
+"/*\n"
 "#btnAcsEdge:hover {\n"
 "    background-color: #fd7e14;\n"
 "    color: #fff;\n"
@@ -252,21 +253,13 @@ class Ui_MainWindow(object):
 "    background-color: transparent;\n"
 "    color: #6c757d;  /* Gray text */\n"
 "}\n"
-"\n"
+"/*\n"
 "#btnTestFloorServer:hover {\n"
 "    background-color: #6c757d;\n"
 "    color: #fff;\n"
 "}\n"
 "\n"
-"/* Category Heading */\n"
-"#category-title {\n"
-"    font-size: 18px;\n"
-"    color: #8a2c54;  /* Dark Red Text */\n"
-"    text-transform: uppercase;\n"
-"    font-weight: bold;\n"
-"    margin-bottom: 5px;\n"
-"    letter-spacing: 1px;\n"
-"}\n"
+"\n"
 "")
         self.leftBar.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.leftBar.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -302,7 +295,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.verticalLayout_6.addWidget(self.label)
         self.btnSmt8Ready = QtWidgets.QPushButton(self.frame_7)
-        self.btnSmt8Ready.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnSmt8Ready.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.btnSmt8Ready.setObjectName("btnSmt8Ready")
         self.verticalLayout_6.addWidget(self.btnSmt8Ready)
         spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
@@ -332,7 +325,7 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.verticalLayout_9.addWidget(self.label_3)
         self.btnHostController = QtWidgets.QPushButton(self.frame_10)
-        self.btnHostController.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnHostController.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.btnHostController.setObjectName("btnHostController")
         self.verticalLayout_9.addWidget(self.btnHostController)
         self.verticalLayout_12.addWidget(self.frame_10)
@@ -355,7 +348,7 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.verticalLayout_10.addWidget(self.label_4)
         self.btnAcsEdge = QtWidgets.QPushButton(self.frame_11)
-        self.btnAcsEdge.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnAcsEdge.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.btnAcsEdge.setObjectName("btnAcsEdge")
         self.verticalLayout_10.addWidget(self.btnAcsEdge)
         self.verticalLayout_13.addWidget(self.frame_11)
@@ -378,7 +371,7 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         self.verticalLayout_11.addWidget(self.label_5)
         self.btnTestFloorServer = QtWidgets.QPushButton(self.frame_13)
-        self.btnTestFloorServer.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnTestFloorServer.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.btnTestFloorServer.setObjectName("btnTestFloorServer")
         self.verticalLayout_11.addWidget(self.btnTestFloorServer)
         spacerItem1 = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
@@ -452,7 +445,7 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_2)
-        self.verticalLayout_4.setContentsMargins(0, 60, 0, 60)
+        self.verticalLayout_4.setContentsMargins(0, 30, 0, 30)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.mainTableFrame = QtWidgets.QFrame(self.frame_2)
         self.mainTableFrame.setStyleSheet("background-color:white;")
@@ -581,7 +574,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 825, 712))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -12, 665, 812))
         self.scrollAreaWidgetContents.setStyleSheet("    background-color: #FFFFFF; /* Set background to white */\n"
 "")
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
@@ -618,6 +611,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.addWidget(self.lblDateTime)
         self.lblLink = QtWidgets.QLabel(self.frame_9)
         self.lblLink.setStyleSheet("")
+        self.lblLink.setWordWrap(True)
         self.lblLink.setObjectName("lblLink")
         self.horizontalLayout_8.addWidget(self.lblLink)
         self.verticalLayout_79.addWidget(self.frame_9)
@@ -649,6 +643,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_20.addWidget(self.lblDateTime_12)
         self.lblLink_12 = QtWidgets.QLabel(self.frame_28)
         self.lblLink_12.setStyleSheet("")
+        self.lblLink_12.setWordWrap(True)
         self.lblLink_12.setObjectName("lblLink_12")
         self.horizontalLayout_20.addWidget(self.lblLink_12)
         self.verticalLayout_79.addWidget(self.frame_28)
@@ -680,6 +675,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_19.addWidget(self.lblDateTime_11)
         self.lblLink_11 = QtWidgets.QLabel(self.frame_27)
         self.lblLink_11.setStyleSheet("")
+        self.lblLink_11.setWordWrap(True)
         self.lblLink_11.setObjectName("lblLink_11")
         self.horizontalLayout_19.addWidget(self.lblLink_11)
         self.verticalLayout_79.addWidget(self.frame_27)
@@ -713,6 +709,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.addWidget(self.lblDateTime_2)
         self.lblLink_2 = QtWidgets.QLabel(self.frame_18)
         self.lblLink_2.setStyleSheet("")
+        self.lblLink_2.setWordWrap(True)
         self.lblLink_2.setObjectName("lblLink_2")
         self.horizontalLayout_10.addWidget(self.lblLink_2)
         self.verticalLayout_79.addWidget(self.frame_18)
@@ -744,6 +741,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_18.addWidget(self.lblDateTime_10)
         self.lblLink_10 = QtWidgets.QLabel(self.frame_26)
         self.lblLink_10.setStyleSheet("")
+        self.lblLink_10.setWordWrap(True)
         self.lblLink_10.setObjectName("lblLink_10")
         self.horizontalLayout_18.addWidget(self.lblLink_10)
         self.verticalLayout_79.addWidget(self.frame_26)
@@ -775,6 +773,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.addWidget(self.lblDateTime_3)
         self.lblLink_3 = QtWidgets.QLabel(self.frame_19)
         self.lblLink_3.setStyleSheet("")
+        self.lblLink_3.setWordWrap(True)
         self.lblLink_3.setObjectName("lblLink_3")
         self.horizontalLayout_11.addWidget(self.lblLink_3)
         self.verticalLayout_79.addWidget(self.frame_19)
@@ -806,6 +805,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.addWidget(self.lblDateTime_4)
         self.lblLink_4 = QtWidgets.QLabel(self.frame_20)
         self.lblLink_4.setStyleSheet("")
+        self.lblLink_4.setWordWrap(True)
         self.lblLink_4.setObjectName("lblLink_4")
         self.horizontalLayout_12.addWidget(self.lblLink_4)
         self.verticalLayout_79.addWidget(self.frame_20)
@@ -837,6 +837,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_13.addWidget(self.lblDateTime_5)
         self.lblLink_5 = QtWidgets.QLabel(self.frame_21)
         self.lblLink_5.setStyleSheet("")
+        self.lblLink_5.setWordWrap(True)
         self.lblLink_5.setObjectName("lblLink_5")
         self.horizontalLayout_13.addWidget(self.lblLink_5)
         self.verticalLayout_79.addWidget(self.frame_21)
@@ -870,6 +871,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.addWidget(self.lblDateTime_6)
         self.lblLink_6 = QtWidgets.QLabel(self.frame_22)
         self.lblLink_6.setStyleSheet("")
+        self.lblLink_6.setWordWrap(True)
         self.lblLink_6.setObjectName("lblLink_6")
         self.horizontalLayout_14.addWidget(self.lblLink_6)
         self.verticalLayout_79.addWidget(self.frame_22)
@@ -901,6 +903,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.addWidget(self.lblDateTime_7)
         self.lblLink_7 = QtWidgets.QLabel(self.frame_23)
         self.lblLink_7.setStyleSheet("")
+        self.lblLink_7.setWordWrap(True)
         self.lblLink_7.setObjectName("lblLink_7")
         self.horizontalLayout_15.addWidget(self.lblLink_7)
         self.verticalLayout_79.addWidget(self.frame_23)
@@ -918,10 +921,10 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame)
-        self.verticalLayout_5.setContentsMargins(0, 60, 20, 60)
+        self.verticalLayout_5.setContentsMargins(0, 30, 20, 30)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.rightMainFrame = QtWidgets.QFrame(self.frame)
-        self.rightMainFrame.setMinimumSize(QtCore.QSize(250, 0))
+        self.rightMainFrame.setMinimumSize(QtCore.QSize(280, 0))
         self.rightMainFrame.setStyleSheet("")
         self.rightMainFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.rightMainFrame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -965,7 +968,7 @@ class Ui_MainWindow(object):
 "\n"
 "QLabel {\n"
 "    color:#667085;\n"
-"font: 57 8pt \"Rubik Medium\";\n"
+"font: 57 8.5pt \"Rubik Medium\";\n"
 "\n"
 "\n"
 "\n"
@@ -1059,7 +1062,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 262, 592))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 264, 659))
         self.scrollAreaWidgetContents_2.setStyleSheet("    background-color: #FFFFFF; /* Set background to white */\n"
 "")
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")

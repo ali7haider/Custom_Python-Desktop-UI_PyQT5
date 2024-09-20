@@ -101,7 +101,9 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             # Link label
             link_label = QLabel()
             link_label.setObjectName('lblLink')
+            link_label.setWordWrap(True)
             link_label.setText(link)
+
             link_label.setStyleSheet("background-color:transparent; color:#5E5F68; padding: 4px;border:none;")
             
             # Add components to layout

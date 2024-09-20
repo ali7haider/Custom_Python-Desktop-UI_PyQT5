@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1367</width>
-    <height>900</height>
+    <width>1322</width>
+    <height>885</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1135</width>
-    <height>870</height>
+    <height>885</height>
    </size>
   </property>
   <property name="font">
@@ -340,6 +340,18 @@ border-radius:5px;
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="leftBar">
          <property name="minimumSize">
@@ -372,7 +384,7 @@ QPushButton {
     background-color: transparent;
     color: #28a745;  /* Green text */
 }
-
+/*
 #btnSmt8Ready:hover {
     background-color: #28a745;
     color: #fff;
@@ -384,7 +396,7 @@ QPushButton {
     background-color: transparent;
     color: #28a745;  /* White text */
 }
-
+/*
 #btnHostController:hover {
 background-color: #218838;
 color:#fff;
@@ -396,7 +408,7 @@ color:#fff;
     background-color: transparent;
     color: #fd7e14;  /* Orange text */
 }
-
+/*
 #btnAcsEdge:hover {
     background-color: #fd7e14;
     color: #fff;
@@ -408,21 +420,13 @@ color:#fff;
     background-color: transparent;
     color: #6c757d;  /* Gray text */
 }
-
+/*
 #btnTestFloorServer:hover {
     background-color: #6c757d;
     color: #fff;
 }
 
-/* Category Heading */
-#category-title {
-    font-size: 18px;
-    color: #8a2c54;  /* Dark Red Text */
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
+
 </string>
          </property>
          <property name="frameShape">
@@ -507,7 +511,7 @@ color:#fff;
              <item>
               <widget class="QPushButton" name="btnSmt8Ready">
                <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+                <cursorShape>ArrowCursor</cursorShape>
                </property>
                <property name="text">
                 <string>SMT8 READY</string>
@@ -592,7 +596,7 @@ color:#fff;
                 <item>
                  <widget class="QPushButton" name="btnHostController">
                   <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
+                   <cursorShape>ArrowCursor</cursorShape>
                   </property>
                   <property name="text">
                    <string>ABLED</string>
@@ -615,6 +619,9 @@ color:#fff;
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_13">
              <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
               <number>0</number>
              </property>
              <property name="bottomMargin">
@@ -642,7 +649,7 @@ color:#fff;
                 <item>
                  <widget class="QPushButton" name="btnAcsEdge">
                   <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
+                   <cursorShape>ArrowCursor</cursorShape>
                   </property>
                   <property name="text">
                    <string>DISCONNECTED</string>
@@ -671,7 +678,7 @@ color:#fff;
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>11</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -698,7 +705,7 @@ color:#fff;
                 <item>
                  <widget class="QPushButton" name="btnTestFloorServer">
                   <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
+                   <cursorShape>ArrowCursor</cursorShape>
                   </property>
                   <property name="text">
                    <string>DISABLED</string>
@@ -857,13 +864,13 @@ font: 9pt &quot;Rubik&quot;;
            <number>0</number>
           </property>
           <property name="topMargin">
-           <number>60</number>
+           <number>30</number>
           </property>
           <property name="rightMargin">
            <number>0</number>
           </property>
           <property name="bottomMargin">
-           <number>60</number>
+           <number>30</number>
           </property>
           <item>
            <widget class="QFrame" name="mainTableFrame">
@@ -1030,9 +1037,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
                       <property name="geometry">
                        <rect>
                         <x>0</x>
-                        <y>0</y>
-                        <width>825</width>
-                        <height>712</height>
+                        <y>-12</y>
+                        <width>676</width>
+                        <height>812</height>
                        </rect>
                       </property>
                       <property name="styleSheet">
@@ -1129,6 +1136,9 @@ border-bottom: 1px solid #E4E7EC;
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1217,6 +1227,9 @@ border-bottom: 1px solid #E4E7EC;
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1304,6 +1317,9 @@ border-bottom: 1px solid #E4E7EC;
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
                             </property>
                             <property name="margin">
                              <number>0</number>
@@ -1395,6 +1411,9 @@ border-bottom: 1px solid #E4E7EC;
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1482,6 +1501,9 @@ border-bottom: 1px solid #E4E7EC;
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
                             </property>
                             <property name="margin">
                              <number>0</number>
@@ -1571,6 +1593,9 @@ border-bottom: 1px solid #E4E7EC;
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1659,6 +1684,9 @@ border-bottom: 1px solid #E4E7EC;
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1746,6 +1774,9 @@ border-bottom: 1px solid #E4E7EC;
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
+                            </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
                             </property>
                             <property name="margin">
                              <number>0</number>
@@ -1837,6 +1868,9 @@ color:#667085;</string>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1925,6 +1959,9 @@ border-bottom: 1px solid #E4E7EC;
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
                             </property>
+                            <property name="wordWrap">
+                             <bool>true</bool>
+                            </property>
                             <property name="margin">
                              <number>0</number>
                             </property>
@@ -1981,19 +2018,19 @@ border-bottom: 1px solid #E4E7EC;
            <number>0</number>
           </property>
           <property name="topMargin">
-           <number>60</number>
+           <number>30</number>
           </property>
           <property name="rightMargin">
            <number>20</number>
           </property>
           <property name="bottomMargin">
-           <number>60</number>
+           <number>30</number>
           </property>
           <item>
            <widget class="QFrame" name="rightMainFrame">
             <property name="minimumSize">
              <size>
-              <width>250</width>
+              <width>280</width>
               <height>0</height>
              </size>
             </property>
@@ -2092,7 +2129,7 @@ border-bottom: 1px solid #E4E7EC;
 
 QLabel {
     color:#667085;
-font: 57 8pt &quot;Rubik Medium&quot;;
+font: 57 8.5pt &quot;Rubik Medium&quot;;
 
 
 
@@ -2196,8 +2233,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>262</width>
-                     <height>592</height>
+                     <width>264</width>
+                     <height>659</height>
                     </rect>
                    </property>
                    <property name="styleSheet">
