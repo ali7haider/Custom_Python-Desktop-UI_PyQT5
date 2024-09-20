@@ -14,7 +14,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 
         # Set up the user interface from the generated class
         self.setupUi(self)
-        self.setWindowFlags(Qt.FramelessWindowHint)
+        # self.setWindowFlags(Qt.FramelessWindowHint)
 
         # Connect the maximizeRestoreAppBtn button to the maximize_window method
         self.maximizeRestoreAppBtn.clicked.connect(self.maximize_window)
@@ -33,17 +33,17 @@ class MainWindow(QMainWindow,Ui_MainWindow):
     def generate_calibration_file_ui(self):
         # Sample data
         data = [
-            ['Warning-1', '2024-09-01 - 08:15:20', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-2', '2024-09-02 - 10:22:30', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-3', '2024-09-03 - 12:33:45', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-4', '2024-09-04 - 14:44:50', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-5', '2024-09-05 - 16:55:55', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-6', '2024-09-06 - 18:05:10', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-7', '2024-09-07 - 20:15:25', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-8', '2024-09-08 - 22:25:35', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
-            ['Warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json']
+            ['warning-1', '2024-09-01 - 08:15:20', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-2', '2024-09-02 - 10:22:30', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-3', '2024-09-03 - 12:33:45', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-4', '2024-09-04 - 14:44:50', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-5', '2024-09-05 - 16:55:55', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-6', '2024-09-06 - 18:05:10', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-7', '2024-09-07 - 20:15:25', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-8', '2024-09-08 - 22:25:35', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json'],
+            ['warning-9', '2024-09-09 - 09:52:05', 'Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json']
 
         ]
 
@@ -93,7 +93,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             # Date label
             date_label = QLabel()
             date_label.setObjectName('lblDateTime')
-            date_label.setMaximumSize(QtCore.QSize(250, 38))
+            date_label.setMaximumSize(QtCore.QSize(180, 38))
 
             date_label.setStyleSheet("background-color:transparent; color:#5E5F68; padding: 4px;border:none;")
             date_label.setText(date)
@@ -157,12 +157,16 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 
             # Container Label
             container_label = QLabel()
+            # Set the maximum width and enable word wrapping
+            
             container_label.setText(container)
+         
             container_label.setStyleSheet("""
                 background-color: transparent;
                 color: #5E5F68;
                 padding: 4px;
                 border: none;
+                                          
             """)
 
             # Frame to hold the status color label and status text label
@@ -170,17 +174,19 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             frame.setStyleSheet("background-color: white; border: none;")  # Set background color to white
             frame.setMaximumSize(QtCore.QSize(16777215, 60))  # Adjust height
             frame_layout = QHBoxLayout(frame)
+
             frame_layout.setContentsMargins(6, 6, 6, 6)
-            frame_layout.setSpacing(4)
+            frame_layout.setSpacing(0)
 
             # Status Indicator Label (Circle container)
             status_circle = QLabel()
+            status_circle.setMinimumSize(QtCore.QSize(15, 15))
             status_circle.setMaximumSize(QtCore.QSize(15, 15))
             status_circle.setStyleSheet(f"""
                 max-width: 15px;
                 max-height: 15px;
                 border-radius: 7px;
-                margin-right: 5px;
+                margin-right: 2px;
                 background-color: {status_color};  /* Color changes based on status */
             """)
             status_circle.setToolTip(status_tooltip)  # Set tooltip for status text label
@@ -203,6 +209,8 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 
             # Add container label and frame to the main layout
             container_layout = QHBoxLayout()
+           
+
             container_layout.addWidget(container_label)  # Container label
             container_layout.addWidget(frame)  # Frame with status color and text
 

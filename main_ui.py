@@ -14,7 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1444, 909)
+        MainWindow.resize(1367, 900)
+        MainWindow.setMinimumSize(QtCore.QSize(1135, 870))
         font = QtGui.QFont()
         font.setFamily("Rubik")
         font.setPointSize(9)
@@ -63,7 +64,7 @@ class Ui_MainWindow(object):
 "QComboBox {\n"
 "    border: none; /* Remove border */\n"
 "    background-color: transparent; /* Make background transparent */\n"
-"    font: 8pt \"Rubik\"; /* Set font to Rubik */\n"
+"    font: 9pt \"Rubik\"; /* Set font to Rubik */\n"
 "    padding: 2px 5px; /* Add padding (adjust as needed) */\n"
 "    color: #4F5268; /* Text color */\n"
 "}\n"
@@ -191,7 +192,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.mainBar)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.leftBar = QtWidgets.QFrame(self.mainBar)
-        self.leftBar.setMinimumSize(QtCore.QSize(280, 0))
+        self.leftBar.setMinimumSize(QtCore.QSize(130, 0))
         self.leftBar.setStyleSheet("QLabel {\n"
 "color:#8588A1;\n"
 "}\n"
@@ -205,8 +206,7 @@ class Ui_MainWindow(object):
 "    margin: 10px 0;\n"
 "    display: block;\n"
 "    padding: 5px;\n"
-"    font-family: Arial, sans-serif;\n"
-"    font-weight: bold;\n"
+"    font-family: Rubik, sans-serif;\n"
 "    cursor: pointer;\n"
 "}\n"
 "\n"
@@ -416,7 +416,7 @@ class Ui_MainWindow(object):
 "    background-color:green;\n"
 "}\n"
 "QLabel {\n"
-"font: 8.5pt \"Rubik\";\n"
+"font: 9pt \"Rubik\";\n"
 "}")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -428,16 +428,16 @@ class Ui_MainWindow(object):
         self.lblAdvancedControl.setText("")
         self.lblAdvancedControl.setObjectName("lblAdvancedControl")
         self.gridLayout.addWidget(self.lblAdvancedControl, 0, 0, 1, 1)
-        self.label_11 = QtWidgets.QLabel(self.frame_5)
-        self.label_11.setObjectName("label_11")
-        self.gridLayout.addWidget(self.label_11, 2, 1, 1, 1)
+        self.lblBasicControlText = QtWidgets.QLabel(self.frame_5)
+        self.lblBasicControlText.setObjectName("lblBasicControlText")
+        self.gridLayout.addWidget(self.lblBasicControlText, 2, 1, 1, 1)
         self.lblDataCollection = QtWidgets.QLabel(self.frame_5)
         self.lblDataCollection.setText("")
         self.lblDataCollection.setObjectName("lblDataCollection")
         self.gridLayout.addWidget(self.lblDataCollection, 1, 0, 1, 1)
-        self.label_9 = QtWidgets.QLabel(self.frame_5)
-        self.label_9.setObjectName("label_9")
-        self.gridLayout.addWidget(self.label_9, 1, 1, 1, 1)
+        self.lblDataCollectiobText = QtWidgets.QLabel(self.frame_5)
+        self.lblDataCollectiobText.setObjectName("lblDataCollectiobText")
+        self.gridLayout.addWidget(self.lblDataCollectiobText, 1, 1, 1, 1)
         self.label_7 = QtWidgets.QLabel(self.frame_5)
         self.label_7.setObjectName("label_7")
         self.gridLayout.addWidget(self.label_7, 0, 1, 1, 1)
@@ -485,12 +485,17 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QLabel {\n"
-"    font: BOLD 10pt \"Arial\";\n"
+"    color:#667085;\n"
+"    font: 57 8.5pt \"Rubik Medium\";\n"
+"\n"
+"\n"
+"\n"
 "}\n"
 "\n"
 "QPushButton {\n"
-"    font: BOLD 10pt \"Arial\";\n"
 "    color: #667085;\n"
+"    font: 87 10pt \"Rubik Medium\";\n"
+"\n"
 "}\n"
 "\n"
 "/* Vertical ScrollBar */\n"
@@ -576,7 +581,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 871, 712))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 825, 712))
         self.scrollAreaWidgetContents.setStyleSheet("    background-color: #FFFFFF; /* Set background to white */\n"
 "")
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
@@ -608,15 +613,11 @@ class Ui_MainWindow(object):
         self.btnWarning.setObjectName("btnWarning")
         self.horizontalLayout_8.addWidget(self.btnWarning)
         self.lblDateTime = QtWidgets.QLabel(self.frame_9)
-        self.lblDateTime.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime.setStyleSheet("")
         self.lblDateTime.setObjectName("lblDateTime")
         self.horizontalLayout_8.addWidget(self.lblDateTime)
         self.lblLink = QtWidgets.QLabel(self.frame_9)
-        self.lblLink.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink.setStyleSheet("")
         self.lblLink.setObjectName("lblLink")
         self.horizontalLayout_8.addWidget(self.lblLink)
         self.verticalLayout_79.addWidget(self.frame_9)
@@ -643,15 +644,11 @@ class Ui_MainWindow(object):
         self.btnWarning_12.setObjectName("btnWarning_12")
         self.horizontalLayout_20.addWidget(self.btnWarning_12)
         self.lblDateTime_12 = QtWidgets.QLabel(self.frame_28)
-        self.lblDateTime_12.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_12.setStyleSheet("")
         self.lblDateTime_12.setObjectName("lblDateTime_12")
         self.horizontalLayout_20.addWidget(self.lblDateTime_12)
         self.lblLink_12 = QtWidgets.QLabel(self.frame_28)
-        self.lblLink_12.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_12.setStyleSheet("")
         self.lblLink_12.setObjectName("lblLink_12")
         self.horizontalLayout_20.addWidget(self.lblLink_12)
         self.verticalLayout_79.addWidget(self.frame_28)
@@ -678,15 +675,11 @@ class Ui_MainWindow(object):
         self.btnWarning_11.setObjectName("btnWarning_11")
         self.horizontalLayout_19.addWidget(self.btnWarning_11)
         self.lblDateTime_11 = QtWidgets.QLabel(self.frame_27)
-        self.lblDateTime_11.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_11.setStyleSheet("")
         self.lblDateTime_11.setObjectName("lblDateTime_11")
         self.horizontalLayout_19.addWidget(self.lblDateTime_11)
         self.lblLink_11 = QtWidgets.QLabel(self.frame_27)
-        self.lblLink_11.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_11.setStyleSheet("")
         self.lblLink_11.setObjectName("lblLink_11")
         self.horizontalLayout_19.addWidget(self.lblLink_11)
         self.verticalLayout_79.addWidget(self.frame_27)
@@ -695,6 +688,8 @@ class Ui_MainWindow(object):
         self.frame_18.setStyleSheet("#frame_18\n"
 "{\n"
 "border-bottom: 1px solid #E4E7EC;\n"
+"    font-family: Rubik, sans-serif;\n"
+"\n"
 "}")
         self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -713,15 +708,11 @@ class Ui_MainWindow(object):
         self.btnWarning_2.setObjectName("btnWarning_2")
         self.horizontalLayout_10.addWidget(self.btnWarning_2)
         self.lblDateTime_2 = QtWidgets.QLabel(self.frame_18)
-        self.lblDateTime_2.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_2.setStyleSheet("")
         self.lblDateTime_2.setObjectName("lblDateTime_2")
         self.horizontalLayout_10.addWidget(self.lblDateTime_2)
         self.lblLink_2 = QtWidgets.QLabel(self.frame_18)
-        self.lblLink_2.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_2.setStyleSheet("")
         self.lblLink_2.setObjectName("lblLink_2")
         self.horizontalLayout_10.addWidget(self.lblLink_2)
         self.verticalLayout_79.addWidget(self.frame_18)
@@ -748,15 +739,11 @@ class Ui_MainWindow(object):
         self.btnWarning_10.setObjectName("btnWarning_10")
         self.horizontalLayout_18.addWidget(self.btnWarning_10)
         self.lblDateTime_10 = QtWidgets.QLabel(self.frame_26)
-        self.lblDateTime_10.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_10.setStyleSheet("")
         self.lblDateTime_10.setObjectName("lblDateTime_10")
         self.horizontalLayout_18.addWidget(self.lblDateTime_10)
         self.lblLink_10 = QtWidgets.QLabel(self.frame_26)
-        self.lblLink_10.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_10.setStyleSheet("")
         self.lblLink_10.setObjectName("lblLink_10")
         self.horizontalLayout_18.addWidget(self.lblLink_10)
         self.verticalLayout_79.addWidget(self.frame_26)
@@ -783,15 +770,11 @@ class Ui_MainWindow(object):
         self.btnWarning_3.setObjectName("btnWarning_3")
         self.horizontalLayout_11.addWidget(self.btnWarning_3)
         self.lblDateTime_3 = QtWidgets.QLabel(self.frame_19)
-        self.lblDateTime_3.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_3.setStyleSheet("")
         self.lblDateTime_3.setObjectName("lblDateTime_3")
         self.horizontalLayout_11.addWidget(self.lblDateTime_3)
         self.lblLink_3 = QtWidgets.QLabel(self.frame_19)
-        self.lblLink_3.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_3.setStyleSheet("")
         self.lblLink_3.setObjectName("lblLink_3")
         self.horizontalLayout_11.addWidget(self.lblLink_3)
         self.verticalLayout_79.addWidget(self.frame_19)
@@ -818,15 +801,11 @@ class Ui_MainWindow(object):
         self.btnWarning_4.setObjectName("btnWarning_4")
         self.horizontalLayout_12.addWidget(self.btnWarning_4)
         self.lblDateTime_4 = QtWidgets.QLabel(self.frame_20)
-        self.lblDateTime_4.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_4.setStyleSheet("")
         self.lblDateTime_4.setObjectName("lblDateTime_4")
         self.horizontalLayout_12.addWidget(self.lblDateTime_4)
         self.lblLink_4 = QtWidgets.QLabel(self.frame_20)
-        self.lblLink_4.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_4.setStyleSheet("")
         self.lblLink_4.setObjectName("lblLink_4")
         self.horizontalLayout_12.addWidget(self.lblLink_4)
         self.verticalLayout_79.addWidget(self.frame_20)
@@ -853,15 +832,11 @@ class Ui_MainWindow(object):
         self.btnWarning_5.setObjectName("btnWarning_5")
         self.horizontalLayout_13.addWidget(self.btnWarning_5)
         self.lblDateTime_5 = QtWidgets.QLabel(self.frame_21)
-        self.lblDateTime_5.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_5.setStyleSheet("")
         self.lblDateTime_5.setObjectName("lblDateTime_5")
         self.horizontalLayout_13.addWidget(self.lblDateTime_5)
         self.lblLink_5 = QtWidgets.QLabel(self.frame_21)
-        self.lblLink_5.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_5.setStyleSheet("")
         self.lblLink_5.setObjectName("lblLink_5")
         self.horizontalLayout_13.addWidget(self.lblLink_5)
         self.verticalLayout_79.addWidget(self.frame_21)
@@ -894,9 +869,7 @@ class Ui_MainWindow(object):
         self.lblDateTime_6.setObjectName("lblDateTime_6")
         self.horizontalLayout_14.addWidget(self.lblDateTime_6)
         self.lblLink_6 = QtWidgets.QLabel(self.frame_22)
-        self.lblLink_6.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_6.setStyleSheet("")
         self.lblLink_6.setObjectName("lblLink_6")
         self.horizontalLayout_14.addWidget(self.lblLink_6)
         self.verticalLayout_79.addWidget(self.frame_22)
@@ -923,15 +896,11 @@ class Ui_MainWindow(object):
         self.btnWarning_7.setObjectName("btnWarning_7")
         self.horizontalLayout_15.addWidget(self.btnWarning_7)
         self.lblDateTime_7 = QtWidgets.QLabel(self.frame_23)
-        self.lblDateTime_7.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblDateTime_7.setStyleSheet("")
         self.lblDateTime_7.setObjectName("lblDateTime_7")
         self.horizontalLayout_15.addWidget(self.lblDateTime_7)
         self.lblLink_7 = QtWidgets.QLabel(self.frame_23)
-        self.lblLink_7.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblLink_7.setStyleSheet("")
         self.lblLink_7.setObjectName("lblLink_7")
         self.horizontalLayout_15.addWidget(self.lblLink_7)
         self.verticalLayout_79.addWidget(self.frame_23)
@@ -952,7 +921,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setContentsMargins(0, 60, 20, 60)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.rightMainFrame = QtWidgets.QFrame(self.frame)
-        self.rightMainFrame.setMinimumSize(QtCore.QSize(0, 0))
+        self.rightMainFrame.setMinimumSize(QtCore.QSize(250, 0))
         self.rightMainFrame.setStyleSheet("")
         self.rightMainFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.rightMainFrame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -978,15 +947,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setContentsMargins(5, -1, 11, -1)
         self.horizontalLayout_4.setSpacing(15)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.comboBox = QtWidgets.QComboBox(self.frame_16)
-        self.comboBox.setStyleSheet("")
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.horizontalLayout_4.addWidget(self.comboBox)
-        self.comboBox_2 = QtWidgets.QComboBox(self.frame_16)
-        self.comboBox_2.setObjectName("comboBox_2")
-        self.comboBox_2.addItem("")
-        self.horizontalLayout_4.addWidget(self.comboBox_2)
+        self.cmbxContainer = QtWidgets.QComboBox(self.frame_16)
+        self.cmbxContainer.setStyleSheet("")
+        self.cmbxContainer.setObjectName("cmbxContainer")
+        self.cmbxContainer.addItem("")
+        self.horizontalLayout_4.addWidget(self.cmbxContainer)
+        self.cmbxStatus = QtWidgets.QComboBox(self.frame_16)
+        self.cmbxStatus.setObjectName("cmbxStatus")
+        self.cmbxStatus.addItem("")
+        self.horizontalLayout_4.addWidget(self.cmbxStatus)
         self.verticalLayout_20.addWidget(self.frame_16)
         self.scrollArea_2 = QtWidgets.QScrollArea(self.OuterFrameRight)
         self.scrollArea_2.setStyleSheet("QScrollArea {\n"
@@ -995,7 +964,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QLabel {\n"
-"    font: BOLD 8pt \"Arial\";\n"
+"    color:#667085;\n"
+"font: 57 8pt \"Rubik Medium\";\n"
+"\n"
+"\n"
+"\n"
 "}\n"
 "\n"
 "QPushButton {\n"
@@ -1086,7 +1059,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 262, 604))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 262, 592))
         self.scrollAreaWidgetContents_2.setStyleSheet("    background-color: #FFFFFF; /* Set background to white */\n"
 "")
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
@@ -1107,9 +1080,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.setSpacing(15)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.lblContainer = QtWidgets.QLabel(self.frame_12)
-        self.lblContainer.setStyleSheet("background-color:transparent;\n"
-"font: BOLD 10pt \"Bell MT\";\n"
-"color:#667085;")
+        self.lblContainer.setStyleSheet("")
         self.lblContainer.setObjectName("lblContainer")
         self.horizontalLayout_9.addWidget(self.lblContainer)
         self.frame_17 = QtWidgets.QFrame(self.frame_12)
@@ -1166,11 +1137,11 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "TEST FLOOR SERVER"))
         self.btnTestFloorServer.setText(_translate("MainWindow", "DISABLED"))
         self.lblAdvancedControl.setToolTip(_translate("MainWindow", "The container is currently running and operational."))
-        self.label_11.setToolTip(_translate("MainWindow", "The container is currently running and operational."))
-        self.label_11.setText(_translate("MainWindow", "Basic Control"))
+        self.lblBasicControlText.setToolTip(_translate("MainWindow", "The container is currently running and operational."))
+        self.lblBasicControlText.setText(_translate("MainWindow", "Basic Control"))
         self.lblDataCollection.setToolTip(_translate("MainWindow", "The container has stopped functioning and is not operational."))
-        self.label_9.setToolTip(_translate("MainWindow", "The container has stopped functioning and is not operational."))
-        self.label_9.setText(_translate("MainWindow", "Data Collection"))
+        self.lblDataCollectiobText.setToolTip(_translate("MainWindow", "The container has stopped functioning and is not operational."))
+        self.lblDataCollectiobText.setText(_translate("MainWindow", "Data Collection"))
         self.label_7.setToolTip(_translate("MainWindow", "The container is currently running and operational."))
         self.label_7.setText(_translate("MainWindow", "Advanced Control"))
         self.lblBasicControl.setToolTip(_translate("MainWindow", "The container is currently running and operational."))
@@ -1204,8 +1175,8 @@ class Ui_MainWindow(object):
         self.btnWarning_7.setText(_translate("MainWindow", "   WARNING"))
         self.lblDateTime_7.setText(_translate("MainWindow", "2024-09-01 - 08:15:20"))
         self.lblLink_7.setText(_translate("MainWindow", "Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json"))
-        self.comboBox.setItemText(0, _translate("MainWindow", "CONTAINER"))
-        self.comboBox_2.setItemText(0, _translate("MainWindow", "STATUS"))
+        self.cmbxContainer.setItemText(0, _translate("MainWindow", "CONTAINER"))
+        self.cmbxStatus.setItemText(0, _translate("MainWindow", "STATUS"))
         self.lblContainer.setText(_translate("MainWindow", "KafkaBroker"))
         self.label_8.setText(_translate("MainWindow", "running"))
 import resources_rc

@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1444</width>
-    <height>909</height>
+    <width>1367</width>
+    <height>900</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1135</width>
+    <height>870</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -64,7 +70,7 @@ background-color:white;
 QComboBox {
     border: none; /* Remove border */
     background-color: transparent; /* Make background transparent */
-    font: 8pt &quot;Rubik&quot;; /* Set font to Rubik */
+    font: 9pt &quot;Rubik&quot;; /* Set font to Rubik */
     padding: 2px 5px; /* Add padding (adjust as needed) */
     color: #4F5268; /* Text color */
 }
@@ -338,7 +344,7 @@ border-radius:5px;
         <widget class="QFrame" name="leftBar">
          <property name="minimumSize">
           <size>
-           <width>280</width>
+           <width>130</width>
            <height>0</height>
           </size>
          </property>
@@ -356,8 +362,7 @@ QPushButton {
     margin: 10px 0;
     display: block;
     padding: 5px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+    font-family: Rubik, sans-serif;
     cursor: pointer;
 }
 
@@ -760,7 +765,7 @@ color:#fff;
 	background-color:green;
 }
 QLabel {
-font: 8.5pt &quot;Rubik&quot;;
+font: 9pt &quot;Rubik&quot;;
 }</string>
             </property>
             <property name="frameShape">
@@ -784,7 +789,7 @@ font: 8.5pt &quot;Rubik&quot;;
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QLabel" name="label_11">
+              <widget class="QLabel" name="lblBasicControlText">
                <property name="toolTip">
                 <string>The container is currently running and operational.</string>
                </property>
@@ -804,7 +809,7 @@ font: 8.5pt &quot;Rubik&quot;;
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLabel" name="label_9">
+              <widget class="QLabel" name="lblDataCollectiobText">
                <property name="toolTip">
                 <string>The container has stopped functioning and is not operational.</string>
                </property>
@@ -920,12 +925,17 @@ font: 8.5pt &quot;Rubik&quot;;
 }
 
 QLabel {
-    font: BOLD 10pt &quot;Arial&quot;;
+    color:#667085;
+	font: 57 8.5pt &quot;Rubik Medium&quot;;
+
+
+
 }
 
 QPushButton {
-    font: BOLD 10pt &quot;Arial&quot;;
     color: #667085;
+	font: 87 10pt &quot;Rubik Medium&quot;;
+
 }
 
 /* Vertical ScrollBar */
@@ -1021,7 +1031,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>871</width>
+                        <width>825</width>
                         <height>712</height>
                        </rect>
                       </property>
@@ -1101,9 +1111,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1116,9 +1124,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1193,9 +1199,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_12">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1208,9 +1212,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_12">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1285,9 +1287,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_11">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1300,9 +1300,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_11">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1327,6 +1325,8 @@ color:#667085;</string>
                           <string notr="true">#frame_18
 {
 border-bottom: 1px solid #E4E7EC;
+    font-family: Rubik, sans-serif;
+
 }</string>
                          </property>
                          <property name="frameShape">
@@ -1377,9 +1377,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_2">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1392,9 +1390,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_2">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1469,9 +1465,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_10">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1484,9 +1478,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_10">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1561,9 +1553,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_3">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1576,9 +1566,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_3">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1653,9 +1641,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_4">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1668,9 +1654,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_4">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1745,9 +1729,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_5">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1760,9 +1742,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_5">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1852,9 +1832,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_6">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -1929,9 +1907,7 @@ border-bottom: 1px solid #E4E7EC;
                           <item>
                            <widget class="QLabel" name="lblDateTime_7">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>2024-09-01 - 08:15:20</string>
@@ -1944,9 +1920,7 @@ color:#667085;</string>
                           <item>
                            <widget class="QLabel" name="lblLink_7">
                             <property name="styleSheet">
-                             <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                             <string notr="true"/>
                             </property>
                             <property name="text">
                              <string>Failed to load config file:/opt/acs/nexus/cont/app_discriptor.json</string>
@@ -2019,7 +1993,7 @@ color:#667085;</string>
            <widget class="QFrame" name="rightMainFrame">
             <property name="minimumSize">
              <size>
-              <width>0</width>
+              <width>250</width>
               <height>0</height>
              </size>
             </property>
@@ -2085,7 +2059,7 @@ color:#667085;</string>
                     <number>11</number>
                    </property>
                    <item>
-                    <widget class="QComboBox" name="comboBox">
+                    <widget class="QComboBox" name="cmbxContainer">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -2097,7 +2071,7 @@ color:#667085;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="comboBox_2">
+                    <widget class="QComboBox" name="cmbxStatus">
                      <item>
                       <property name="text">
                        <string>STATUS</string>
@@ -2117,7 +2091,11 @@ color:#667085;</string>
 }
 
 QLabel {
-    font: BOLD 8pt &quot;Arial&quot;;
+    color:#667085;
+font: 57 8pt &quot;Rubik Medium&quot;;
+
+
+
 }
 
 QPushButton {
@@ -2219,7 +2197,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
                      <x>0</x>
                      <y>0</y>
                      <width>262</width>
-                     <height>604</height>
+                     <height>592</height>
                     </rect>
                    </property>
                    <property name="styleSheet">
@@ -2269,9 +2247,7 @@ border-bottom: 1px solid #E4E7EC;
                        <item>
                         <widget class="QLabel" name="lblContainer">
                          <property name="styleSheet">
-                          <string notr="true">background-color:transparent;
-font: BOLD 10pt &quot;Bell MT&quot;;
-color:#667085;</string>
+                          <string notr="true"/>
                          </property>
                          <property name="text">
                           <string>KafkaBroker</string>
