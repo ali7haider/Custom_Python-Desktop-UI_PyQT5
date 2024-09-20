@@ -183,7 +183,6 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             # Status Indicator Label (Circle container)
             status_circle = QLabel()
             status_circle.setMinimumSize(QtCore.QSize(15, 15))
-            status_circle.setMaximumSize(QtCore.QSize(15, 15))
             status_circle.setStyleSheet(f"""
                 max-width: 15px;
                 max-height: 15px;

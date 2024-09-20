@@ -105,6 +105,91 @@ QToolTip {
             border: 1px solid #666; /* Dark border color */
             padding: 5px;           /* Padding around the text */
         }
+
+
+
+/* Vertical ScrollBar */
+QScrollArea {
+    border: none;
+    background-color: #FFFFFF; /* Set background to white */
+}
+QScrollBar:vertical {
+    border: 1px solid #D3D3D3; /* Light border color */
+    background: #F9F9F9; /* Light background color */
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #B0B0B0; /* Dark grey color */
+    min-height: 20px;
+    border-radius: 5px; /* Rounded handle */
+}
+
+QScrollBar::add-line:vertical {
+    background: #D3D3D3; /* Light border color */
+    height: 12px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    background: #D3D3D3; /* Light border color */
+    height: 12px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 2px solid #B0B0B0; /* Dark grey color */
+    width: 3px;
+    height: 3px;
+    background: #FFFFFF; /* White arrow background */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Horizontal ScrollBar */
+QScrollBar:horizontal {
+    border: 1px solid #D3D3D3; /* Light border color */
+    background: #F9F9F9; /* Light background color */
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #B0B0B0; /* Dark grey color */
+    min-width: 20px;
+    border-radius: 5px; /* Rounded handle */
+}
+
+QScrollBar::add-line:horizontal {
+    background: #D3D3D3; /* Light border color */
+    width: 12px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: #D3D3D3; /* Light border color */
+    width: 12px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid #B0B0B0; /* Dark grey color */
+    width: 3px;
+    height: 3px;
+    background: #FFFFFF; /* White arrow background */
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
 </string>
   </property>
   <widget class="QWidget" name="bg">
@@ -437,7 +522,7 @@ color:#fff;
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <property name="topMargin">
-           <number>60</number>
+           <number>30</number>
           </property>
           <item>
            <widget class="QFrame" name="frame_8">
@@ -464,7 +549,7 @@ color:#fff;
               <number>5</number>
              </property>
              <property name="bottomMargin">
-              <number>11</number>
+              <number>0</number>
              </property>
              <item>
               <widget class="QLabel" name="lblLogo">
@@ -926,10 +1011,7 @@ font: 9pt &quot;Rubik&quot;;
                    <item>
                     <widget class="QScrollArea" name="scrollArea">
                      <property name="styleSheet">
-                      <string notr="true">QScrollArea {
-    border: none;
-    background-color: #FFFFFF; /* Set background to white */
-}
+                      <string notr="true">
 
 QLabel {
     color:#667085;
@@ -945,83 +1027,6 @@ QPushButton {
 
 }
 
-/* Vertical ScrollBar */
-QScrollBar:vertical {
-    border: 1px solid #D3D3D3; /* Light border color */
-    background: #F9F9F9; /* Light background color */
-    width: 12px;
-    margin: 0px 0px 0px 0px;
-}
-
-QScrollBar::handle:vertical {
-    background: #B0B0B0; /* Dark grey color */
-    min-height: 20px;
-    border-radius: 5px; /* Rounded handle */
-}
-
-QScrollBar::add-line:vertical {
-    background: #D3D3D3; /* Light border color */
-    height: 12px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:vertical {
-    background: #D3D3D3; /* Light border color */
-    height: 12px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
-    border: 2px solid #B0B0B0; /* Dark grey color */
-    width: 3px;
-    height: 3px;
-    background: #FFFFFF; /* White arrow background */
-}
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-    background: none;
-}
-
-/* Horizontal ScrollBar */
-QScrollBar:horizontal {
-    border: 1px solid #D3D3D3; /* Light border color */
-    background: #F9F9F9; /* Light background color */
-    height: 12px;
-    margin: 0px 0px 0px 0px;
-}
-
-QScrollBar::handle:horizontal {
-    background: #B0B0B0; /* Dark grey color */
-    min-width: 20px;
-    border-radius: 5px; /* Rounded handle */
-}
-
-QScrollBar::add-line:horizontal {
-    background: #D3D3D3; /* Light border color */
-    width: 12px;
-    subcontrol-position: right;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-    background: #D3D3D3; /* Light border color */
-    width: 12px;
-    subcontrol-position: left;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
-    border: 2px solid #B0B0B0; /* Dark grey color */
-    width: 3px;
-    height: 3px;
-    background: #FFFFFF; /* White arrow background */
-}
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
-    background: none;
-}
 </string>
                      </property>
                      <property name="frameShape">
@@ -1037,7 +1042,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
                       <property name="geometry">
                        <rect>
                         <x>0</x>
-                        <y>-12</y>
+                        <y>0</y>
                         <width>676</width>
                         <height>812</height>
                        </rect>
@@ -2122,10 +2127,7 @@ border-bottom: 1px solid #E4E7EC;
                 <item>
                  <widget class="QScrollArea" name="scrollArea_2">
                   <property name="styleSheet">
-                   <string notr="true">QScrollArea {
-    border: none;
-    background-color: #FFFFFF; /* Set background to white */
-}
+                   <string notr="true">
 
 QLabel {
     color:#667085;
@@ -2140,83 +2142,6 @@ QPushButton {
     color: #667085;
 }
 
-/* Vertical ScrollBar */
-QScrollBar:vertical {
-    border: 1px solid #D3D3D3; /* Light border color */
-    background: #F9F9F9; /* Light background color */
-    width: 12px;
-    margin: 0px 0px 0px 0px;
-}
-
-QScrollBar::handle:vertical {
-    background: #B0B0B0; /* Dark grey color */
-    min-height: 20px;
-    border-radius: 5px; /* Rounded handle */
-}
-
-QScrollBar::add-line:vertical {
-    background: #D3D3D3; /* Light border color */
-    height: 12px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:vertical {
-    background: #D3D3D3; /* Light border color */
-    height: 12px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
-    border: 2px solid #B0B0B0; /* Dark grey color */
-    width: 3px;
-    height: 3px;
-    background: #FFFFFF; /* White arrow background */
-}
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-    background: none;
-}
-
-/* Horizontal ScrollBar */
-QScrollBar:horizontal {
-    border: 1px solid #D3D3D3; /* Light border color */
-    background: #F9F9F9; /* Light background color */
-    height: 12px;
-    margin: 0px 0px 0px 0px;
-}
-
-QScrollBar::handle:horizontal {
-    background: #B0B0B0; /* Dark grey color */
-    min-width: 20px;
-    border-radius: 5px; /* Rounded handle */
-}
-
-QScrollBar::add-line:horizontal {
-    background: #D3D3D3; /* Light border color */
-    width: 12px;
-    subcontrol-position: right;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-    background: #D3D3D3; /* Light border color */
-    width: 12px;
-    subcontrol-position: left;
-    subcontrol-origin: margin;
-}
-
-QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
-    border: 2px solid #B0B0B0; /* Dark grey color */
-    width: 3px;
-    height: 3px;
-    background: #FFFFFF; /* White arrow background */
-}
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
-    background: none;
-}
 </string>
                   </property>
                   <property name="frameShape">
